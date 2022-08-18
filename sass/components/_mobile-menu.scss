@@ -1,7 +1,7 @@
 .mobile-menu {
   position: fixed;
-  background-color: $primary-white-color;
-  box-shadow: $mobile-box-shadow;
+  background-color: white;
+  box-shadow: black;
   position: fixed;
   top: 0;
   right: -110%;
@@ -11,7 +11,7 @@
   z-index: 10;
   justify-content: space-between;
 
-  transition: right $transition-duration;
+  transition: right --transition-duration;
 
   &.is-open {
     right: 0%;
@@ -40,7 +40,7 @@
 
 .mobile-menu__icons:focus,
 .mobile-menu__icons:hover {
-  fill: $accent-color;
+  fill: red;
 }
 
 .icon-cross {

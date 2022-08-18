@@ -1,18 +1,22 @@
 // Base
-@import "./base/common";
-@import "./base/container";
-@import "./base/visually-hidden";
+@import './base/common';
+@import './base/container';
 
 // Utils
-@import "./utils/variables";
-@import "./utils/placeholders";
+@import './utils/variables';
+@import './utils/placeholders';
 
 // Components
-@import "./components/page-header";
-@import "./components/mobile-menu";
-@import "./components/logo";
-@import "./components/hero";
-@import "./components/button";
-@import "./components/social-networks";
-@import "./components/footer";
-@import "./components/modal";
+@import './components/mobile-menu';
+@import './components/logo';
+@import './components/button';
+
+// Layout
+@import './layout/page-header';
+@import './layout/hero';
+@import './layout/how-it-works';
+@import './layout/start-playing';
+@import './layout/available-subscriptions';
+@import './layout/run-device';
+@import './layout/location-map';
+@import './layout/footer';
