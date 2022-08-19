@@ -452,6 +452,8 @@ ol {
           animation: gradient-animation 2.5s alternate infinite; /*Applying the keyframe animation.*/
   border-radius: 15px; /*Rounds the corners a little.*/
   z-index: -1; /*Sends the the gradient background to the back of the card.*/
+  -webkit-box-shadow: 0px 9px 40px 20px rgba(33, 138, 171, 0.7);
+  box-shadow: 0px 9px 40px 20px rgba(33, 138, 171, 0.7);
 }
 
 @-webkit-keyframes gradient-animation {
@@ -488,8 +490,8 @@ ol {
   position: absolute;
   inset: 0;
   opacity: 0;
-  -webkit-animation: cycle 12s infinite;
-          animation: cycle 12s infinite;
+  -webkit-animation: cycle 16s infinite;
+          animation: cycle 16s infinite;
 }
 
 .slide-2 {
@@ -556,4 +558,93 @@ ol {
   100% {
     opacity: 0;
   }
+}
+/* ======================== */
+.mouse {
+  position: absolute;
+  right: 50%;
+  bottom: 5%;
+  width: 25px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 13;
+  /*This is used here for aligning the mouse wheel in the middle of the mouse container. We could use align items and justify content center here,
+    but in this situation it's easier to do a margin of auto on the mouse wheel itself and it will do the same thing with one less line of css.*/
+}
+
+.mouse-wheel {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: auto;
+  /*Centers the mouse wheel vertically and horizontally (because of help from display: flex on the mouse).*/
+  -webkit-animation: move-wheel 1s linear infinite;
+          animation: move-wheel 1s linear infinite;
+}
+
+/* Here at the start of the animation the mouse wheel will have an opacity of 0 and it will be moved up. At the end the opacity is 1 and it is moved down */
+@-webkit-keyframes move-wheel {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
+}
+@keyframes move-wheel {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
+}
+.how-it-works-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.how-it-works-container::after {
+  width: 160px;
+  height: 2px;
+  content: "";
+  margin-left: -120px;
+  background-color: red;
+}
+
+.how-it-works-icon {
+  width: 800px;
+  height: 800px;
+  -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(3px 3px 12px #0594c0);
+}
+
+.how-it-works-icon-metka {
+  position: absolute;
+  z-index: 15;
+  top: -40%;
+  left: -17%;
+  -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(1px 1px 42px #0594c0);
 }/*# sourceMappingURL=main.css.map */
