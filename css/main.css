@@ -62,6 +62,7 @@ ol {
   --primary-text-colors: #ffffff;
   --light-blue-color: #00c5ff;
   --logo-color: #57d6ff;
+  --subtitle-color: #57d6ff;
 }
 
 .menu__item {
@@ -320,6 +321,50 @@ ol {
             transform: translate(0);
   }
 }
+.headlines {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+.headlines__subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: var(--roboto);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 180%;
+  color: var(--subtitle-color);
+}
+.headlines__subtitle::before {
+  display: block;
+  content: "";
+  width: 50px;
+  height: 2px;
+  margin-right: 30px;
+  background-color: var(--subtitle-color);
+}
+.headlines__title {
+  font-family: "Aire Exterior";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 39px;
+  line-height: 1;
+  color: var(--primary-text-colors);
+}
+
 .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -380,6 +425,10 @@ ol {
   font-size: 16px;
   line-height: 180%;
   color: var(--primary-text-colors);
+}
+
+.hero {
+  margin-bottom: 150px;
 }
 
 .container-hero {
@@ -563,7 +612,7 @@ ol {
 .mouse {
   position: absolute;
   right: 50%;
-  bottom: 5%;
+  bottom: 10%;
   width: 25px;
   height: 50px;
   border: 2px solid #fff;
@@ -613,7 +662,47 @@ ol {
             transform: translateY(1rem);
   }
 }
-.how-it-works-container {
+.how-it-works {
+  margin-bottom: 150px;
+}
+
+.container-how-it-works {
+  background-image: url(../../images/main-page/how-it-works/imageserverhost.svg);
+  background-size: 50%;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.description-conteiner {
+  max-width: 480px;
+  margin-left: auto;
+}
+
+.how-it-works__text {
+  font-family: var(--roboto);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 21.33px;
+  line-height: 150%;
+  color: #ababab;
+}
+.how-it-works__text_shadow {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 60px;
+  margin-bottom: 49px;
+}
+.how-it-works__link {
+  display: block;
+  font-family: var(--roboto);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #00c5ff;
+  margin-top: 74px;
+}
+
+.location-map-container {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -625,26 +714,42 @@ ol {
       -ms-flex-align: center;
           align-items: center;
 }
-.how-it-works-container::after {
-  width: 160px;
-  height: 2px;
-  content: "";
-  margin-left: -120px;
-  background-color: red;
-}
 
-.how-it-works-icon {
+.location-map-icon {
   width: 800px;
-  height: 800px;
+  height: 650px;
   -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
   filter: drop-shadow(3px 3px 12px #0594c0);
 }
 
-.how-it-works-icon-metka {
+.location-map-icon-metka {
   position: absolute;
   z-index: 15;
   top: -40%;
-  left: -17%;
+  left: -2%;
   -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
   filter: drop-shadow(1px 1px 42px #0594c0);
+}
+
+.kiev {
+  position: absolute;
+  font-family: "Aire Exterior";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 20px;
+  left: 60%;
+  top: 40%;
+}
+.kiev::before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: white;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  left: -120%;
+  top: -40%;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,45 @@
+.location-map-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-map-icon {
+  width: 800px;
+  height: 650px;
+  -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(3px 3px 12px #0594c0);
+}
+
+.location-map-icon-metka {
+  position: absolute;
+  z-index: 15;
+  top: -40%;
+  left: -2%;
+  -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(1px 1px 42px #0594c0);
+}
+
+.kiev {
+  position: absolute;
+  font-family: 'Aire Exterior';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 20px;
+  left: 60%;
+  top: 40%;
+
+  &::before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 2px;
+    background-color: white;
+    transform: rotate(20deg);
+    left: -120%;
+    top: -40%;
+  }
+}
